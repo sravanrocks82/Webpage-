@@ -1,0 +1,29 @@
+
+                    <table class="table table-bordered table-striped table-hover dataTable ">
+                        <thead>
+                        <tr>
+                            <td>Billing</td>
+                            <td>Network</td>
+                            <td>Device Model</td>
+                            <td>Device Sr.No</td>
+                            <td>IMEI No</td>
+                            <td>ICCID</td>
+                            <td>SIM1</td>
+                            <td>SIM2</td>
+                            <td>Activation Date</td>
+                        </tr>
+                        </thead>
+                        <tbody><tr>
+                            <td>Quarterly</td>
+                            <td>AIRTEL</td>
+                            <td>17IS</td>
+                            <td>BSTP17A072300015344</td>
+                            <td>864180064659308</td>
+                            <td>8991102305846117804F</td>
+                            <td>5754214518326</td>
+                            <td>5752051041325</td>
+                            <td>28/07/2023</td>
+
+                        </tr>
+                    </tbody></table>
+                

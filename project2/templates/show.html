@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        table {
+          width: 50%;
+          border-collapse: collapse;
+          margin: 20px;
+        }
+    
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+    
+        th {
+          background-color: #f2f2f2;
+        }
+      </style>
+{% if data %}
+<h2>Uploaded Data:</h2>
+<ul>
+    {% for line in data %}
+        <li>{{ line }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<form action="/result" class="m-3 p-3" method="post">
+    <label for="user_input" class="">Enter the Activation Date:</label>
+    <input type="text" name="sravan" required>
+    <button class=" btn-outline-dark" classtype="submit">Submit</button>
+</form>
+<div> 
+<h1>Query Result</h1>
+<ul>
+<table>
+  <tr>
+  <thead class="m-3 p-3">
+  {% for x in first_data %}
+      <li class="shadow-lg"> {{ x[] }}</li>
+  {% endfor %}
+  </thead>
+  </tr>
+ <div>
+    <h1>Data from MySQL</h1>
+  
+          <table>
+              <thead>
+                <tr>
+                  <th class="bg-primary col">Name</th>
+                   <th class="bg-light">Network</th>
+                   <th class="">Device Model</th>
+                   <th>Device Sr.No</th>
+                   <th>IMEI No</th>
+                   <th>ICCID</th>
+                   <th>SIM1</th>
+                   <th>SIM2</th>
+                   <th>Activation Date</th>
+                 </tr>
+              {% for y in second_data %}
+                <tr>
+                 <tr></th>
+                  <th>{{ y[0] }}</th>
+                  <th>{{ y[1] }}</th>
+                  <th>{{ y[2] }}</th>
+                  <th>{{ y[3] }}</th>
+                  <th>{{ y[4] }}</th>
+                  <th>{{ y[5] }}</th>
+                  <th>{{ y[6] }}</th>
+                  <th>{{ y[7] }}</th>
+                  <th>{{ y[8] }}</th>
+                  <th>{{ y[9]  }}</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% endfor %}
+              </tbody>
+            </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
